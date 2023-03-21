@@ -25,8 +25,8 @@ public class Main {
                 .toList();
 
         persons.stream()
-                .filter(x -> x.getSex() == Sex.MAN ? x.getAge() >= 18 && x.getAge() <= 65 :
-                        x.getAge() >= 18 && x.getAge() <= 60)
+                .filter(x -> x.getAge() >= 18)
+                .filter(x -> x.getSex() == Sex.MAN ? x.getAge() <= 65 : x.getAge() <= 60)
                 .filter(x -> x.getEducation() == Education.HIGHER)
                 .sorted()
                 .toList();
